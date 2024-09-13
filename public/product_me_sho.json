@@ -1,0 +1,26 @@
+[
+    {
+        "id": 13,
+        "name":"Men's Black Office Shoes",
+        "price":2000,
+        "image":"images/products/shoes/shoes1.webp"
+    },
+    {
+        "id": 14,
+        "name":"Men's Maroon Office Shoes",
+        "price":1599,
+        "image":"images/products/shoes/shoes2.webp"
+    },
+    {
+        "id": 15,
+        "name":"Men's Black Office Shoes",
+        "price":1899,
+        "image":"images/products/shoes/shoes3.webp"
+    },
+    {
+        "id": 16,
+        "name":"Men's Wedding Shoes",
+        "price":1099,
+        "image":"images/products/shoes/shoes4.webp"
+    }
+]

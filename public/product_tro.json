@@ -1,0 +1,26 @@
+[
+    {
+        "id": 9,
+        "name":"White Two Piece Office Look",
+        "price":2000,
+        "image":"images/products/trouser/trouser2.webp"
+    },
+    {
+        "id": 10,
+        "name":"Baggy Trouser and Top",
+        "price":1599,
+        "image":"images/products/trouser/trouser3.webp"
+    },
+    {
+        "id": 11,
+        "name":"Off Shoulder Two Piece",
+        "price":1899,
+        "image":"images/products/trouser/trouser4.webp"
+    },
+    {
+        "id": 12,
+        "name":"Two Piece Corset with Trouser",
+        "price":1099,
+        "image":"images/products/trouser/trouser5.webp"
+    }
+]

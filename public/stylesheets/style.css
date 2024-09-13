@@ -1,0 +1,572 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.logo {
+    height: 6em;
+    filter: invert(100%);
+}
+
+#header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 0px 0px;
+    padding: 0px 80px;
+
+}
+
+.hidden_left {
+    opacity: 0;
+    filter: blur(3px);
+    transform: translateX(-100%);
+    transition: all 1.5s;
+}
+
+.show_left {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateX(0);
+}
+
+.hidden_up {
+    opacity: 0;
+    filter: blur(3px);
+    transform: translateY(-100%);
+    transition: all 1.5s;
+}
+
+.show_up {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateY(0);
+}
+
+#main {
+    height: 840px;
+    border: none;
+    background-image: url("/images/kendall_jenner_5k_2.jpg");
+    background-size: cover;
+    position: relative;
+}
+
+h1 {
+    font-family: "Kalnia", serif;
+    font-weight: 500;
+    font-size: 55px;
+    color: white;
+    margin-top: 10px;
+}
+
+.link {
+    padding-top: 1em;
+}
+
+#navlink {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding-top: 0px;
+}
+
+#navlink li {
+    padding: 0 20px;
+    position: relative;
+}
+
+#navlink li a {
+    text-decoration: none;
+    color: white;
+    font-family: "Dosis", sans-serif;
+    font-weight: 500;
+    font-size: large;
+    transition: all 0.25s ease;
+}
+
+#navlink li a.active::after,
+#navlink li a:hover::after {
+    content: "";
+    width: 30%;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+
+#res {
+    color: white;
+    margin-top: 30px;
+    display: none;
+}
+
+#close {
+    color: white;
+    display: none;
+}
+
+#message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding-top: 7em;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    position: sticky;
+    top: 0px;
+    padding-bottom: 1em;
+}
+
+#message #btn1 {
+    border: 1px white solid;
+    background: transparent;
+    color: white;
+    font-size: 15px;
+    padding: 1em 5em;
+    transition: 0.1ms border ease-in;
+}
+
+#message #btn1:hover {
+    border: 2.15px white solid;
+    cursor: pointer;
+}
+
+#features {
+    padding: 80px 20px;
+    padding-bottom: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border-bottom: grey 1px solid;
+}
+
+#features .box1 img {
+    height: 30em;
+    width: 25em;
+    transition: all 0.7s;
+}
+
+#features .box1 img:hover {
+    border-radius: 0.7em;
+    box-shadow: 0 0.1em 1em -0.4em grey;
+    transform: translateY(-0.7em);
+}
+
+#features .box1 p {
+    font-weight: 600;
+    font-size: 1.75em;
+    font-family: "Dosis", sans-serif;
+}
+
+#features .box1 button {
+    font-size: medium;
+    display: flex;
+    align-items: flex-start;
+    border: none;
+    background: none;
+    border-bottom: black 2px solid;
+    cursor: pointer;
+}
+
+#products {
+    padding-bottom: 1em;
+}
+
+#products h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Kalnia", serif;
+    font-weight: 500;
+    font-size: 2.75em;
+    padding-bottom: 50px;
+    border-bottom: grey 1px solid;
+
+}
+
+#products p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Dosis", sans-serif;
+    font-weight: 400;
+    font-size: 2em;
+}
+
+h3,
+h4 {
+    font-family: "Dosis", sans-serif;
+    font-weight: 600;
+}
+
+#shirt,
+#two_piece,
+#trouser,
+#men_shoes,
+#women_shoes {
+    padding-bottom: 0.75em;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border-bottom: grey 1px solid;
+}
+
+#women_shoes {
+    border: none;
+}
+
+#two_piece,
+#trouser,
+#men_shoes,
+#women_shoes {
+    padding-top: 1.3em;
+}
+
+#shirt .pro,
+#two_piece .pro,
+#trouser .pro,
+#men_shoes .pro,
+#women_shoes .pro {
+    text-align: center;
+}
+
+#shirt .pro img,
+#two_piece .pro img,
+#trouser .pro img,
+#men_shoes .pro img,
+#women_shoes .pro img {
+    height: 18em;
+    width: 15em;
+}
+
+#shirt .pro a,
+#two_piece .pro a,
+#trouser .pro a,
+#men_shoes .pro a,
+#women_shoes .pro a {
+    padding: 6px 6px;
+    color: black;
+    border: black 1px solid;
+    border-radius: 50%;
+}
+
+#shirt .pro a:hover,
+#two_piece .pro a:hover,
+#trouser .pro a:hover,
+#men_shoes .pro a:hover,
+#women_shoes .pro a:hover {
+    color: white;
+    background: black;
+}
+
+#banner {
+    background-image: url("/images/1000_F_272320686_WPr0zMuDxazM8QmRRuBcKj3GtHxrCYMY.jpg");
+    background-size: cover;
+    background-position: top 100px;
+    width: 100%;
+    height: 20em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5em;
+}
+
+#banner h4 {
+    color: white;
+    font-size: 3em;
+    font-family: "Kalnia", serif;
+}
+
+.btn2 {
+    border: 1px white solid;
+    border-radius: 1.75em;
+    background: transparent;
+    color: white;
+    backdrop-filter: blur(10px);
+    font-size: 15px;
+    padding: 1em 5em;
+    transition: 0.1ms border ease-in;
+}
+
+#banner #btn2:hover {
+    border: 2.15px white solid;
+    cursor: pointer;
+}
+
+#newsletter {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: #343a40;
+    margin-bottom: 1.5em;
+}
+
+.news {
+    padding-top: 0px;
+    padding-left: 2.75em;
+}
+
+.news h4 {
+    display: flex;
+    flex-direction: column;
+    font-size: 2em;
+    font-weight: 800;
+    font-family: "EB Garamond", serif;
+    color: white;
+}
+
+.news p {
+    font-size: 1.25em;
+    font-weight: 400;
+    font-family: "Dosis", sans-serif;
+    color: white;
+}
+
+.news p span {
+    color: #e09f3e;
+}
+
+#newsletter input {
+    height: 3.125rem;
+    font-size: 1em;
+    width: 80%;
+    padding-left: 1em;
+    border: 1px solid transparent;
+    border-radius: 0.5em;
+    outline: none;
+}
+
+.form .sign {
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    height: 3.4rem;
+    font-size: 1em;
+    font-weight: 600;
+    border: 1px solid transparent;
+    border-radius: 0.5em;
+    outline: none;
+    background-color: #e09f3e;
+    white-space: nowrap;
+    margin-right: 1em;
+}
+
+.form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 40%;
+}
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 0px;
+    padding-left: 4em;
+    padding-right: 4em;
+    font-size: 1.20em;
+    font-family: "Dosis", sans-serif;
+}
+
+footer h4 {
+    font-size: 1.35em;
+}
+
+footer a {
+    text-decoration: none;
+    padding-bottom: 1em;
+}
+
+footer .col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+footer .copyright {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+footer .icon {
+    font-size: 1em;
+}
+
+footer .icon i {
+    padding-right: 0.5em;
+}
+
+footer .icon #facebook:hover {
+    color: blue;
+}
+
+footer .icon #instagram:hover {
+    color: #E1306C;
+}
+
+footer .icon #youtube:hover {
+    color: red;
+}
+
+footer .icon #twitter:hover {
+    color: #1DA1F2;
+}
+
+@media (max-width:900px) {
+
+
+    #navlink {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        align-items: flex-start;
+        position: absolute;
+        /* top: 0; */
+        top: -400px;
+        height: 300px;
+        width: 300px;
+        background-color: transparent;
+        backdrop-filter: blur(10px);
+        padding: 80px 0 0 20px;
+        transition: 0.3s;
+    }
+
+    #main {
+        height: 840px;
+        border: none;
+        background-image: url("/images/kendall_jenner_5k_2.jpg");
+        background-position: center;
+        position: relative;
+    }
+
+    #navlink.active {
+        top: 0px;
+    }
+
+    #navlink li {
+        margin-bottom: 25px;
+    }
+
+    #res {
+        display: flex;
+    }
+
+    #close {
+        display: flex;
+        position: absolute;
+        top: 30px;
+        left: 37px;
+        color: white;
+        font-size: 24px;
+        text-decoration: none;
+    }
+
+    #features {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        border-bottom: grey 1px solid;
+    }
+
+    #features .box1 img {
+        height: 20em;
+        width: 15em;
+        transition: all 0.7s;
+    }
+
+    #shirt,
+    #two_piece,
+    #trouser,
+    #men_shoes,
+    #women_shoes {
+        padding-bottom: 0.75em;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-evenly;
+        border-bottom: grey 1px solid;
+    }
+
+    #shirt .pro img,
+    #two_piece .pro img,
+    #trouser .pro img,
+    #men_shoes .pro img,
+    #women_shoes .pro img {
+        height: 10em;
+        width: 7em;
+    }
+}
+
+@media (max-width:400px) {
+    #navlink {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        align-items: flex-start;
+        position: absolute;
+        /* top: 0; */
+        top: -300px;
+        z-index: 999;
+        height: auto;
+        width: 100px;
+        background-color: transparent;
+        backdrop-filter: blur(10px);
+        padding: 80px 0 0 20px;
+        transition: 0.3s;
+    }
+
+    #navlink.active {
+        top: 0px;
+        display: flex;
+        /* Show when active */
+    }
+
+    #main {
+        height: 840px;
+        border: none;
+        background-image: url("/images/kendall_jenner_5k_2.jpg");
+        background-position: top right 62%;
+        position: relative;
+    }
+
+    #features {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #features .box1 button {
+        margin-bottom: 10px;
+    }
+
+    #shirt,
+    #two_piece,
+    #trouser,
+    #men_shoes,
+    #women_shoes {
+        flex-direction: column;
+    }
+
+    #shirt .pro img,
+    #two_piece .pro img,
+    #trouser .pro img,
+    #men_shoes .pro img,
+    #women_shoes .pro img {
+        margin-top: 20px;
+    }
+
+    #newsletter input {
+        width: 200px;
+    }
+}

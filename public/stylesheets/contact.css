@@ -1,0 +1,487 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.logo {
+    height: 6em;
+    filter: invert(100%);
+}
+
+#header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 0px 0px;
+    padding: 0px 80px;
+
+}
+
+.hidden_left {
+    opacity: 0;
+    filter: blur(3px);
+    transform: translateX(-100%);
+    transition: all 1.5s;
+}
+
+.show_left {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateX(0);
+}
+
+.hidden_up {
+    opacity: 0;
+    filter: blur(3px);
+    transform: translateY(-100%);
+    transition: all 1.5s;
+}
+
+.show_up {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateY(0);
+}
+
+#main {
+    height: 450px;
+    border: none;
+    background-image: url("/images/about/about1.jpg");
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 5em;
+}
+
+h1 {
+    font-family: "Kalnia", serif;
+    font-weight: 500;
+    font-size: 55px;
+    color: black;
+    margin-top: 10px;
+}
+
+.link {
+    padding-top: 1em;
+}
+
+#navlink {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding-top: 0px;
+}
+
+#navlink li {
+    padding: 0 20px;
+    position: relative;
+}
+
+#navlink li a {
+    text-decoration: none;
+    color: black;
+    font-family: "Dosis", sans-serif;
+    font-weight: 500;
+    font-size: large;
+    transition: all 0.25s ease;
+}
+
+#navlink li a.active::after,
+#navlink li a:hover::after {
+    content: "";
+    width: 30%;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+
+#res {
+    color: black;
+    margin-top: 30px;
+    display: none;
+}
+
+#close {
+    color: white;
+    display: none;
+}
+
+#message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 600;
+    font-size: 50px;
+    top: 0px;
+    padding-bottom: 1em;
+}
+
+#section {
+    display: flex;
+    align-items: center;
+    margin-left: 3.5em;
+    margin-bottom: 4em;
+}
+
+#section .detail {
+    width: 40%;
+    margin-right: 5em;
+}
+
+#section span,
+#form-me span {
+    font-size: 25px;
+}
+
+#section h2,
+#form-me h2 {
+    font-size: 65px;
+    font-family: "Dosis", sans-serif;
+}
+
+#section li {
+    list-style: none;
+    display: flex;
+    padding: 10px 0;
+}
+
+#section li i {
+    font-size: 25pxpx;
+    padding-right: 27px;
+}
+
+#section li p {
+    margin: 0;
+    font-size: 20px;
+    font-family: "Dosis", sans-serif;
+    font-weight: 500;
+}
+
+#newsletter {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: #343a40;
+    margin-bottom: 1.5em;
+}
+
+#section .map {
+    width: 55%;
+    height: 400px;
+}
+
+#section .map iframe {
+    width: 90%;
+    height: 100%;
+}
+
+.news {
+    padding-top: 0px;
+    padding-left: 2.75em;
+}
+
+.news h4 {
+    display: flex;
+    flex-direction: column;
+    font-size: 2em;
+    font-weight: 800;
+    font-family: "EB Garamond", serif;
+    color: white;
+}
+
+.news p {
+    font-size: 1.25em;
+    font-weight: 400;
+    font-family: "Dosis", sans-serif;
+    color: white;
+}
+
+.news p span {
+    color: #e09f3e;
+}
+
+#newsletter input {
+    height: 3.125rem;
+    font-size: 1em;
+    width: 80%;
+    padding-left: 1em;
+    border: 1px solid transparent;
+    border-radius: 0.5em;
+    outline: none;
+}
+
+#form-me {
+    margin: 30px;
+    padding: 80px;
+    border: 2px solid grey;
+}
+
+#form-me h2 {
+    font-family: "Dosis", sans-serif;
+}
+
+#form-me form {
+    width: 66%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#form-me form input,
+#form-me form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border: 2px solid grey;
+}
+
+.btn2 {
+    border: 1px black solid;
+    /* border-radius: 1.75em; */
+    background: white;
+    color: black;
+    backdrop-filter: blur(10px);
+    font-size: 15px;
+    padding: 1em 2em;
+    cursor: pointer;
+    transition: 0.3s all;
+    margin-bottom: 10px;
+}
+
+.btn2:hover {
+    color: white;
+    background-color: black;
+}
+
+.form .sign {
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    height: 3.4rem;
+    font-size: 1em;
+    font-weight: 600;
+    border: 1px solid transparent;
+    border-radius: 0.5em;
+    outline: none;
+    background-color: #e09f3e;
+    white-space: nowrap;
+    margin-right: 1em;
+}
+
+.form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 40%;
+}
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 0px;
+    padding-left: 4em;
+    padding-right: 4em;
+    font-size: 1.20em;
+    font-family: "Dosis", sans-serif;
+}
+
+footer h4 {
+    font-size: 1.35em;
+}
+
+footer a {
+    text-decoration: none;
+    padding-bottom: 1em;
+}
+
+footer .col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+footer .copyright {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+footer .icon {
+    font-size: 1em;
+}
+
+footer .icon i {
+    padding-right: 0.5em;
+}
+
+footer .icon #facebook:hover {
+    color: blue;
+}
+
+footer .icon #instagram:hover {
+    color: #E1306C;
+}
+
+footer .icon #youtube:hover {
+    color: red;
+}
+
+footer .icon #twitter:hover {
+    color: #1DA1F2;
+}
+
+@media (max-width:900px) {
+
+
+    #navlink {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        align-items: flex-start;
+        position: absolute;
+        /* top: 0; */
+        top: -400px;
+        height: 300px;
+        width: 300px;
+        background-color: transparent;
+        backdrop-filter: blur(10px);
+        padding: 80px 0 0 20px;
+        transition: 0.3s;
+    }
+
+    #main {
+        height: 840px;
+        border: none;
+        background-image: url("/images/about/about1.jpg");
+        background-position: center;
+        position: relative;
+    }
+
+    #navlink.active {
+        top: 0px;
+    }
+
+    #navlink li {
+        margin-bottom: 25px;
+    }
+
+    #res {
+        display: flex;
+    }
+
+    #close {
+        display: flex;
+        position: absolute;
+        top: 30px;
+        left: 37px;
+        color: black;
+        font-size: 24px;
+        text-decoration: none;
+    }
+
+    .message {
+        color: black;
+    }
+
+
+}
+
+@media (max-width:400px) {
+    #navlink {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        align-items: flex-start;
+        position: absolute;
+        /* top: 0; */
+        top: -300px;
+        z-index: 999;
+        height: auto;
+        width: 100px;
+        background-color: grey;
+        backdrop-filter: blur(10px);
+        padding: 80px 0 0 20px;
+        transition: 0.3s;
+    }
+
+    #navlink.active {
+        top: 0px;
+        display: flex;
+        /* Show when active */
+    }
+
+    #navlink li {
+        margin-bottom: 25px;
+    }
+
+    #close {
+        display: flex;
+        position: absolute;
+        top: 30px;
+        left: 37px;
+        color: black;
+        font-size: 24px;
+        text-decoration: none;
+    }
+
+    #message h2 {
+        color: black;
+    }
+
+    h1 {
+        color: black;
+    }
+
+    #section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #section .detail {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    #section .map {
+        width: 100%;
+    }
+
+    #form-me {
+        margin: 10px;
+        padding: 30px 10px;
+        flex-wrap: wrap;
+    }
+
+    #form-me form {
+        width: 100%;
+    }
+
+    #form-me form input,
+    #form-me form textarea {
+        width: 90%;
+
+    }
+
+    #main {
+        height: 840px;
+        border: none;
+        background-image: url("/images/about/about1.jpg");
+        background-position: bottom;
+        position: relative;
+    }
+
+
+
+    #newsletter input {
+        width: 200px;
+    }
+}

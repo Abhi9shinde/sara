@@ -1,0 +1,442 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.logo {
+    height: 6em;
+    filter: invert(100%);
+}
+
+#header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 0px 0px;
+    padding: 0px 80px;
+
+}
+
+.hidden_left {
+    opacity: 0;
+    filter: blur(3px);
+    transform: translateX(-100%);
+    transition: all 1.5s;
+}
+
+.show_left {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateX(0);
+}
+
+.hidden_up {
+    opacity: 0;
+    filter: blur(3px);
+    transform: translateY(-100%);
+    transition: all 1.5s;
+}
+
+.show_up {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateY(0);
+}
+
+#main {
+    height: 450px;
+    border: none;
+    background-image: url("/images/shop.webp");
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 5em;
+}
+
+h1 {
+    font-family: "Kalnia", serif;
+    font-weight: 500;
+    font-size: 55px;
+    color: white;
+    margin-top: 10px;
+}
+
+.link {
+    padding-top: 1em;
+}
+
+#navlink {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding-top: 0px;
+}
+
+#navlink li {
+    padding: 0 20px;
+    position: relative;
+}
+
+#navlink li a {
+    text-decoration: none;
+    color: white;
+    font-family: "Dosis", sans-serif;
+    font-weight: 500;
+    font-size: large;
+    transition: all 0.25s ease;
+}
+
+#navlink li a.active::after,
+#navlink li a:hover::after {
+    content: "";
+    width: 30%;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+
+#res {
+    color: white;
+    margin-top: 30px;
+    display: none;
+}
+
+#close {
+    color: white;
+    display: none;
+}
+
+#message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 600;
+    font-size: 50px;
+    top: 0px;
+    padding-bottom: 1em;
+}
+
+#cart {
+    overflow-x: auto;
+}
+
+#cart table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    white-space: nowrap;
+}
+
+#cart table img {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    width: 70px;
+}
+
+#cart table td:nth-child(1) {
+    width: 100px;
+    text-align: center;
+}
+
+#cart table td:nth-child(2) {
+    width: 150px;
+    text-align: center;
+}
+
+#cart table td:nth-child(3) {
+    width: 250px;
+    text-align: center;
+}
+
+#cart table td:nth-child(4),
+#cart table td:nth-child(5) {
+    width: 150px;
+    text-align: center;
+}
+
+#cart table td:nth-child(3) input {
+    width: 70px;
+    padding: 10px 5px 10px 15px;
+}
+
+#cart table thead {
+    border: 2px solid grey;
+    border-left: none;
+    border-right: none;
+}
+
+#cart table thead th {
+    font-weight: 700;
+    font-family: "Dosis";
+    text-transform: uppercase;
+    font-size: 19px;
+    padding: 18px 0;
+}
+
+#cart table tbody td {
+    font-family: "Dosis";
+    font-size: 20px;
+}
+
+#newsletter {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: #343a40;
+    margin-bottom: 1.5em;
+}
+
+
+
+.news {
+    padding-top: 0px;
+    padding-left: 2.75em;
+}
+
+.news h4 {
+    display: flex;
+    flex-direction: column;
+    font-size: 2em;
+    font-weight: 800;
+    font-family: "EB Garamond", serif;
+    color: white;
+}
+
+.news p {
+    font-size: 1.25em;
+    font-weight: 400;
+    font-family: "Dosis", sans-serif;
+    color: white;
+}
+
+.news p span {
+    color: #e09f3e;
+}
+
+#newsletter input {
+    height: 3.125rem;
+    font-size: 1em;
+    width: 80%;
+    padding-left: 1em;
+    border: 1px solid transparent;
+    border-radius: 0.5em;
+    outline: none;
+}
+
+
+
+.form .sign {
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    height: 3.4rem;
+    font-size: 1em;
+    font-weight: 600;
+    border: 1px solid transparent;
+    border-radius: 0.5em;
+    outline: none;
+    background-color: #e09f3e;
+    white-space: nowrap;
+    margin-right: 1em;
+}
+
+.form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 40%;
+}
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 0px;
+    padding-left: 4em;
+    padding-right: 4em;
+    font-size: 1.20em;
+    font-family: "Dosis", sans-serif;
+}
+
+footer h4 {
+    font-size: 1.35em;
+}
+
+footer a {
+    text-decoration: none;
+    padding-bottom: 1em;
+}
+
+footer .col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+footer .copyright {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+footer .icon {
+    font-size: 1em;
+}
+
+footer .icon i {
+    padding-right: 0.5em;
+}
+
+footer .icon #facebook:hover {
+    color: blue;
+}
+
+footer .icon #instagram:hover {
+    color: #E1306C;
+}
+
+footer .icon #youtube:hover {
+    color: red;
+}
+
+footer .icon #twitter:hover {
+    color: #1DA1F2;
+}
+
+@media (max-width:900px) {
+
+
+    #navlink {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        align-items: flex-start;
+        position: absolute;
+        /* top: 0; */
+        top: -400px;
+        height: 300px;
+        width: 300px;
+        background-color: transparent;
+        backdrop-filter: blur(10px);
+        padding: 80px 0 0 20px;
+        transition: 0.3s;
+    }
+
+    #cart table {
+        width: auto;
+    }
+
+    #main {
+        height: 840px;
+        border: none;
+        background-image: url("/images/about/about1.jpg");
+        background-position: center;
+        position: relative;
+    }
+
+    #navlink.active {
+        top: 0px;
+    }
+
+    #navlink li {
+        margin-bottom: 25px;
+    }
+
+    #res {
+        display: flex;
+    }
+
+    #close {
+        display: flex;
+        position: absolute;
+        top: 30px;
+        left: 37px;
+        color: black;
+        font-size: 24px;
+        text-decoration: none;
+    }
+
+    .message {
+        color: black;
+    }
+
+
+}
+
+@media (max-width:400px) {
+    #navlink {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        align-items: flex-start;
+        position: absolute;
+        /* top: 0; */
+        top: -400px;
+        height: 300px;
+        width: 100px;
+        background-color: transparent;
+        backdrop-filter: blur(10px);
+        padding: 80px 0 0 20px;
+        transition: 0.3s;
+    }
+
+    #navlink.active {
+        top: 0px;
+    }
+
+    .message {
+        color: white;
+    }
+
+    #navlink li {
+        margin-bottom: 25px;
+    }
+
+    #close {
+        display: flex;
+        position: absolute;
+        top: 30px;
+        left: 37px;
+        color: white;
+        font-size: 24px;
+        text-decoration: none;
+    }
+
+    h1 {
+        color: white;
+    }
+
+    #main {
+        height: 840px;
+        border: none;
+        background-image: url("/images/shop.webp");
+        background-position: bottom;
+        position: relative;
+    }
+
+    #cart table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    #cart table td:nth-child(3) input {
+        width: 30px;
+    }
+
+
+
+
+
+
+    #newsletter input {
+        width: 200px;
+    }
+}

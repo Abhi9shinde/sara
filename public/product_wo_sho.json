@@ -1,0 +1,26 @@
+[
+    {
+        "id": 17,
+        "name":"White Tall Heels",
+        "price":2000,
+        "image":"images/products/heels/heels1.webp"
+    },
+    {
+        "id": 18,
+        "name":"Black Tall Heels",
+        "price":1599,
+        "image":"images/products/heels/heels2.webp"
+    },
+    {
+        "id": 19,
+        "name":"Black Tall Heels",
+        "price":1899,
+        "image":"images/products/heels/heels3.webp"
+    },
+    {
+        "id": 20,
+        "name":"Women's Black Tall Boots",
+        "price":1099,
+        "image":"images/products/heels/heels4.webp"
+    }
+]

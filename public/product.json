@@ -1,0 +1,132 @@
+{
+    "shirt": [
+        {
+            "id": 1,
+            "name": "Men's Trendy Beach Shirt",
+            "price": 1799,
+            "image": "/images/products/shirt/shirt1.jpg"
+        },
+        {
+            "id": 2,
+            "name": "Men's Trendy Beach Shirt",
+            "price": 1799,
+            "image": "/images/products/shirt/shirt2.jpg"
+        },
+        {
+            "id": 3,
+            "name": "Men's Trendy Beach Shirt",
+            "price": 1799,
+            "image": "/images/products/shirt/shirt3.jpg"
+        },
+        {
+            "id": 4,
+            "name": "Men's Trendy Beach Shirt",
+            "price": 1799,
+            "image": "/images/products/shirt/shirt5.jpg"
+        }
+    ],
+    "twoPiece": [
+        {
+            "id": 5,
+            "name": "White Two Piece Office Look",
+            "price": 2000,
+            "image": "images/products/two piece/two_piece.webp"
+        },
+        {
+            "id": 6,
+            "name": "Baggy Trouser and Top",
+            "price": 1599,
+            "image": "images/products/two piece/two_piece2.webp"
+        },
+        {
+            "id": 7,
+            "name": "Off Shoulder Two Piece",
+            "price": 1899,
+            "image": "images/products/two piece/off_shoulder_crop_top.webp"
+        },
+        {
+            "id": 8,
+            "name": "Two Piece Corset with Trouser",
+            "price": 1099,
+            "image": "images/products/two piece/two_piece3.webp"
+        }
+    ],
+    "trouser":[
+        {
+            "id": 9,
+            "name":"White Two Piece Office Look",
+            "price":2000,
+            "image":"images/products/trouser/trouser2.webp"
+        },
+        {
+            "id": 10,
+            "name":"Baggy Trouser and Top",
+            "price":1599,
+            "image":"images/products/trouser/trouser3.webp"
+        },
+        {
+            "id": 11,
+            "name":"Off Shoulder Two Piece",
+            "price":1899,
+            "image":"images/products/trouser/trouser4.webp"
+        },
+        {
+            "id": 12,
+            "name":"Two Piece Corset with Trouser",
+            "price":1099,
+            "image":"images/products/trouser/trouser5.webp"
+        }
+    ],
+    "menShoe":[
+        {
+            "id": 13,
+            "name":"Men's Black Office Shoes",
+            "price":2000,
+            "image":"images/products/shoes/shoes1.webp"
+        },
+        {
+            "id": 14,
+            "name":"Men's Maroon Office Shoes",
+            "price":1599,
+            "image":"images/products/shoes/shoes2.webp"
+        },
+        {
+            "id": 15,
+            "name":"Men's Black Office Shoes",
+            "price":1899,
+            "image":"images/products/shoes/shoes3.webp"
+        },
+        {
+            "id": 16,
+            "name":"Men's Wedding Shoes",
+            "price":1099,
+            "image":"images/products/shoes/shoes4.webp"
+        }
+    ],
+    "womenShoe":[
+        {
+            "id": 17,
+            "name":"White Tall Heels",
+            "price":2000,
+            "image":"images/products/heels/heels1.webp"
+        },
+        {
+            "id": 18,
+            "name":"Black Tall Heels",
+            "price":1599,
+            "image":"images/products/heels/heels2.webp"
+        },
+        {
+            "id": 19,
+            "name":"Black Tall Heels",
+            "price":1899,
+            "image":"images/products/heels/heels3.webp"
+        },
+        {
+            "id": 20,
+            "name":"Women's Black Tall Boots",
+            "price":1099,
+            "image":"images/products/heels/heels4.webp"
+        }
+    ]
+}
