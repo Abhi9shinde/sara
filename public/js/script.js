@@ -71,62 +71,101 @@ const alertFunction = (ProductID) => {
 //function to add elements in the cart array
 
 const addtoCart = (ProductID) => {
-  let positionTheProductInCart = carts.findIndex((value) => value.product_id == ProductID);
-  if (carts.length <= 0) {
-    //1st element added
-    carts = [
-      {
+    let carts = JSON.parse(localStorage.getItem('carts')) || [];
+    let positionTheProductInCart = carts.findIndex((value) => value.product_id == ProductID);
+    if (carts.length <= 0 || positionTheProductInCart < 0) {
+      carts.push({
         product_id: ProductID,
         quantity: 1,
-      },
-    ];
-  } else if (positionTheProductInCart < 0) {
-    //check if new element is add if not then go to else statement
-    carts.push({
-      product_id: ProductID,
-      quantity: 1,
-    });
-  } else {
-    carts[positionTheProductInCart].quantity += 1; //increase quantity if already exists
-  }
-  addCarttoHTML();
-  console.log(carts);
-};
-const addCarttoHTML = () => {
-  const cartHTML = document.querySelector("#cart tbody");
-  if (cartHTML) {
-    cartHTML.innerHTML = '';
-  }
-  if (Array.isArray(listProduct) && carts.length > 0) {
-    carts.forEach((cart) => {
-      let newCart = document.createElement("tr");
-      let productPosition = listProduct.findIndex((value) => value.id == cart.product_id);
-      let info = listProduct[productPosition];
-      newCart.innerHTML = `
-            <td><img src="${info.image}"></td>
-                    <td>${info.name}</td>
-                    <td>${cart.quantity}</td>
-                    <td>Rs.${info.price}</td>
-                    <td><a href="#"><i class="far fa-times-circle"></i></a></td>
+      });
+    } else {
+      carts[positionTheProductInCart].quantity += 1;
+    }
+    localStorage.setItem('carts', JSON.stringify(carts));
+    alert('Product added to cart!');
+  };
+
+  const renderCart = () => {
+    const cartHTML = document.querySelector("#cart tbody");
+    if (cartHTML) {
+      cartHTML.innerHTML = '';
+      const carts = JSON.parse(localStorage.getItem('carts')) || [];
+      if (carts.length > 0) {
+        carts.forEach((cart) => {
+          let info = null;
+          for (let category in listProduct) {
+            if (Array.isArray(listProduct[category])) {
+              info = listProduct[category].find(item => item.id == cart.product_id);
+              if (info) break;
+            }
+          }
+          if (info) {
+            let newCart = document.createElement("tr");
+            newCart.innerHTML = `
+              <td><img src="${info.image}" alt="${info.name}"></td>
+              <td>${info.name}</td>
+              <td><input type="number" value="${cart.quantity}" min="1" onchange="updateQuantity(${cart.product_id}, this.value)"></td>
+              <td>Rs.${info.price * cart.quantity}</td>
+              <td><a href="#" onclick="removeFromCart(${cart.product_id})"><i class="far fa-times-circle"></i></a></td>
             `;
-    });
-    console.log(newCart);
-    cartHTML.appendChild(newCart);
+            cartHTML.appendChild(newCart);
+          }
+        });
+      } else {
+        cartHTML.innerHTML = '<br><tr><td colspan="5">Your cart is empty</td></tr><br>';
+        
+      }
+    }
+  };
+
+  function removeFromCart(productId) {
+    let carts = JSON.parse(localStorage.getItem('carts')) || [];
+    carts = carts.filter(item => item.product_id != productId);
+    localStorage.setItem('carts', JSON.stringify(carts));
+    renderCart();
   }
-};
 
-const initApp = () => {
 
-  fetch("/product.json")
-    .then((response) => response.json())
-    .then((data) => {
-      listProduct = data;
-      addDatatoHTML("shirt", listProduct.shirt);
-      addDatatoHTML("two_piece", listProduct.twoPiece);
-      addDatatoHTML("trouser", listProduct.trouser);
-      addDatatoHTML("men_shoes", listProduct.menShoe);
-      addDatatoHTML("women_shoes", listProduct.womenShoe);
-      console.log(typeof(listProduct))
+const loadProducts = () => {
+    return fetch("/product.json")
+      .then((response) => response.json())
+      .then((data) => {
+        listProduct = data;
+        console.log('Loaded products:', listProduct);
+        return data;
+      });
+  };
+
+  const initApp = () => {
+    loadProducts().then(() => {
+      if (window.location.pathname === '/' || window.location.pathname === '/index' ) {
+        // Home page
+        addDatatoHTML("shirt", listProduct.shirt);
+        addDatatoHTML("two_piece", listProduct.twoPiece);
+        addDatatoHTML("trouser", listProduct.trouser);
+        addDatatoHTML("men_shoes", listProduct.menShoe);
+        addDatatoHTML("women_shoes", listProduct.womenShoe);
+      }else if(window.location.pathname.startsWith('/single')){
+        if(document.getElementById('shirt')){
+            addDatatoHTML("shirt", listProduct.shirt);
+        }
+        if(document.getElementById('two_piece')){
+            addDatatoHTML("two_piece", listProduct.twoPiece);
+        }
+        if(document.getElementById('trouser')){
+            addDatatoHTML("trouser", listProduct.trouser);
+        }
+        if(document.getElementById('men_shoes')){
+            addDatatoHTML("men_shoes", listProduct.menShoe);
+        }
+        if(document.getElementById('women_shoes')){
+            addDatatoHTML("women_shoes", listProduct.womenShoert);
+        }
+
+      } else if (window.location.pathname === '/bag') {
+        // Bag page
+        renderCart();
+      }
     });
-};
+  };
 initApp();
