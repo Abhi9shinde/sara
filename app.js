@@ -22,33 +22,12 @@ app.get('/',(req,res)=>{
     res.render('menu/index')
 });
 
-//SINGLE MEN COLLECTION
-app.get('/single1',(req,res)=>{
-    res.render('single/single1');
-})
-app.get('/single2',(req,res)=>{
-  res.render('single/single2');
-})
-app.get('/single3',(req,res)=>{
-  res.render('single/single3');
-})
-app.get('/single4',(req,res)=>{
-  res.render('single/single4');
+//SINGLE COLLECTION
+app.get('/:num',(req,res)=>{
+  const{num}=req.params;
+    res.render(`single/single${num}`);
 })
 
-//SINGLE WOMEN COLLECTION
-app.get('/single5',(req,res)=>{
-  res.render('single_women/single5');
-})
-app.get('/single6',(req,res)=>{
-  res.render('single_women/single6');
-})
-app.get('/single7',(req,res)=>{
-  res.render('single_women/single7');
-})
-app.get('/single8',(req,res)=>{
-  res.render('single_women/single8');
-})
 
 //MENU BUTTONS
 app.get('/about',(req,res)=>{

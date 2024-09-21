@@ -61,7 +61,7 @@ const addDatatoHTML = (ele, prodList) => {
 };
 
 function redirectToPage(productId) {
-  window.location.href = `/single${productId}`;
+  window.location.href = `/${productId}`;
 }
 
 //getting product id to add it in the cart
