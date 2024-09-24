@@ -131,7 +131,7 @@ const loadProducts = () => {
       .then((response) => response.json())
       .then((data) => {
         listProduct = data;
-        console.log('Loaded products:', listProduct);
+        // console.log('Loaded products:', listProduct);
         return data;
       });
   };

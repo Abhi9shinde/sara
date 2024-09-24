@@ -22,13 +22,6 @@ app.get('/',(req,res)=>{
     res.render('menu/index')
 });
 
-//SINGLE COLLECTION
-app.get('/:num',(req,res)=>{
-  const{num}=req.params;
-    res.render(`single/single${num}`);
-})
-
-
 //MENU BUTTONS
 app.get('/about',(req,res)=>{
   res.render('menu/about')
@@ -41,4 +34,9 @@ app.get('/contact',(req,res)=>{
 });
 app.get('/bag',(req,res)=>{
   res.render('menu/bag')
+})
+//SINGLE COLLECTION
+app.get('/:num',(req,res)=>{
+  const{num}=req.params;
+    res.render(`single/single${num}`);
 })
