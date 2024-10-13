@@ -12,12 +12,6 @@ app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 app.use(express.static(path.join(__dirname, "public")));
 
-
-
-app.listen(3000, () => {
-    console.log("LISTENING ON PORT 3000");
-  });
-
 app.get('/',(req,res)=>{
     res.render('menu/index')
 });
@@ -36,7 +30,11 @@ app.get('/bag',(req,res)=>{
   res.render('menu/bag')
 })
 //SINGLE COLLECTION
-app.get('/:num',(req,res)=>{
+app.get('/single/:num',(req,res)=>{
   const{num}=req.params;
     res.render(`single/single${num}`);
 })
+
+app.listen(3000, () => {
+  console.log("LISTENING ON PORT 3000");
+});

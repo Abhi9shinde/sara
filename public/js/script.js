@@ -61,7 +61,7 @@ const addDatatoHTML = (ele, prodList) => {
 };
 
 function redirectToPage(productId) {
-  window.location.href = `/${productId}`;
+  window.location.href = `/single/${productId}`;   // '/' so that whenever clicked inside another it will get redirected to the page!!
 }
 
 //getting product id to add it in the cart
@@ -159,7 +159,7 @@ const loadProducts = () => {
             addDatatoHTML("men_shoes", listProduct.menShoe);
         }
         if(document.getElementById('women_shoes')){
-            addDatatoHTML("women_shoes", listProduct.womenShoert);
+            addDatatoHTML("women_shoes", listProduct.womenShoe);
         }
 
       } else if (window.location.pathname === '/bag') {
