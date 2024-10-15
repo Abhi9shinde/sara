@@ -19,21 +19,27 @@ app.get('/',(req,res)=>{
 //MENU BUTTONS
 app.get('/about',(req,res)=>{
   res.render('menu/about')
-})
+});
 app.get('/index',(req,res)=>{
   res.render('menu/index')
-})
+});
 app.get('/contact',(req,res)=>{
   res.render('menu/contact')
 });
 app.get('/bag',(req,res)=>{
   res.render('menu/bag')
-})
+});
+app.get('/login',(req,res)=>{
+  res.render('menu/login')
+});
+app.get('/signup',(req,res)=>{
+  res.render('menu/signup')
+});
 //SINGLE COLLECTION
 app.get('/single/:num',(req,res)=>{
   const{num}=req.params;
     res.render(`single/single${num}`);
-})
+});
 
 app.listen(3000, () => {
   console.log("LISTENING ON PORT 3000");
