@@ -48,26 +48,24 @@
     </div>
     <section id="prodet" class="hidden_up">
         <div class="single-product">
-
-            <img src="/images/products/two piece/two_piece2.webp" width="100%" id="main" alt="two_piece">
+            <img src="<%= product.image %>" width="100%" id="main" alt="image">
             <div class="similar-image-group">
                 <div class="small-image-col">
-                    <img src="/images/products/two piece/off_shoulder_crop_top.webp" width="100%" class="small-img"
-                        alt="two_piece">
+                    <img src="<%= product.sim1 %>" width="100%" class="small-img" alt="image">
                 </div>
                 <div class="small-image-col">
-                    <img src="/images/products/two piece/two_piece.webp" width="100%" class="small-img" alt="two_piece">
+                    <img src="<%= product.sim2 %>" width="100%" class="small-img" alt="image">
                 </div>
                 <div class="small-image-col">
-                    <img src="/images/products/two piece/two_piece3.webp" width="100%" class="small-img" alt="two_piece">
+                    <img src="<%= product.sim3 %>" width="100%" class="small-img" alt="image">
                 </div>
 
             </div>
         </div>
         <div class="single-pro-detail">
-            <h6>Home/Women's Two Piece Collection</h6>
-            <h4>Baggy Trouser and Top</h4>
-            <h2>Rs.1599</h2>
+            <h6><%=product.head%></h6>
+            <h4><%=product.name%></h4>
+            <h2>Rs.<%=product.price%></h2>
             <select>
                 <option>Select Size</option>
                 <option>S</option>
@@ -76,27 +74,27 @@
                 <option>XL</option>
             </select>
             <input type="number" value="1" min="0">
-            <button class="btn2">Add To Cart</button>
+            <button class="btn2" onclick="alertFunction('<%=prodId%>')">Add To Cart</button>
             <h4>Product Details</h4>
-            <p>- Material type Lycra</p>
-            <p>- Style A-Line</p>
-            <p>- Closure type Elastic</p>
-            <p>- Care instructions Machine Wash</p>
-            <p>- Age range description Adult</p>
-            <p>- Sleeve type Sleeveless</p>
-            <p>- Country of Origin India</p>
+            <p>- Material compositionRayon</p>
+            <p>- PatternPrinted</p>
+            <p>- Fit typeRegular Fit</p>
+            <p>- Sleeve typeShort Sleeve</p>
+
+            <p>- Collar styleREGULAR COLLAR</p>
+            <p>- LengthStandard Length</p>
+            <p>- Country of OriginIndia</p>
         </div>
     </section>
     <section id="products">
         <h2>Similar Products</h2>
-        <p>Men's Summer Collection</p>
-        <div id="shirt" class="">
+        <p>Women's New Arrival</p>
+        <div id="two_piece" class="">
             <!-- added using JS -->
         </div>
         <p>Women's Trouser Collection</p>
         <div id="trouser" class="">
             <!-- added using JS -->
         </div>
-
     </section>
 <%- include('../partials/footer') %>

@@ -2,131 +2,253 @@
     "shirt": [
         {
             "id": 1,
+            "head":"Home/Men's Summer Collection",
             "name": "Men's Trendy Beach Shirt",
             "price": 1799,
-            "image": "/images/products/shirt/shirt1.jpg"
+            "image": "/images/products/shirt/shirt1.jpg",
+            "sim1":"/images/products/shirt/shirt2.jpg",
+            "sim2":"/images/products/shirt/shirt3.jpg",
+            "sim3":"/images/products/shirt/shirt5.jpg"
         },
         {
             "id": 2,
+            "head":"Home/Men's Summer Collection",
             "name": "Men's Trendy Beach Shirt",
             "price": 1799,
-            "image": "/images/products/shirt/shirt2.jpg"
+            "image": "/images/products/shirt/shirt2.jpg",
+            "sim1":"/images/products/shirt/shirt1.jpg",
+            "sim2":"/images/products/shirt/shirt3.jpg",
+            "sim3":"/images/products/shirt/shirt5.jpg"
         },
         {
             "id": 3,
+            "head":"Home/Men's Summer Collection",
             "name": "Men's Trendy Beach Shirt",
             "price": 1799,
-            "image": "/images/products/shirt/shirt3.jpg"
+            "image": "/images/products/shirt/shirt3.jpg",
+            "sim1":"/images/products/shirt/shirt2.jpg",
+            "sim2":"/images/products/shirt/shirt1.jpg",
+            "sim3":"/images/products/shirt/shirt5.jpg"
         },
         {
             "id": 4,
+            "head":"Home/Men's Summer Collection",
             "name": "Men's Trendy Beach Shirt",
             "price": 1799,
-            "image": "/images/products/shirt/shirt5.jpg"
+            "image": "/images/products/shirt/shirt5.jpg",
+            "sim1":"/images/products/shirt/shirt2.jpg",
+            "sim2":"/images/products/shirt/shirt3.jpg",
+            "sim3":"/images/products/shirt/shirt1.jpg"
         }
     ],
     "twoPiece": [
         {
             "id": 5,
+            "head":"Home/Women's Two Piece Collection",
             "name": "White Two Piece Office Look",
             "price": 2000,
-            "image": "/images/products/two piece/two_piece.webp"
+            "image": "/images/products/two piece/two_piece.webp",
+            "sim1":"/images/products/two piece/two_piece2.webp",
+            "sim2":"/images/products/two piece/two_piece3.webp",
+            "sim3":"/images/products/two piece/two_piece4.webp"
         },
         {
             "id": 6,
+            "head":"Home/Women's Two Piece Collection",
             "name": "Baggy Trouser and Top",
             "price": 1599,
-            "image": "/images/products/two piece/two_piece2.webp"
+            "image": "/images/products/two piece/two_piece2.webp",
+            "sim1":"/images/products/two piece/two_piece.webp",
+            "sim2":"/images/products/two piece/two_piece3.webp",
+            "sim3":"/images/products/two piece/two_piece4.webp"
         },
         {
             "id": 7,
+            "head":"Home/Women's Two Piece Collection",
             "name": "Off Shoulder Two Piece",
             "price": 1899,
-            "image": "/images/products/two piece/off_shoulder_crop_top.webp"
+            "image": "/images/products/two piece/two_piece4.webp",
+            "sim1":"/images/products/two piece/two_piece.webp",
+            "sim2":"/images/products/two piece/two_piece2.webp",
+            "sim3":"/images/products/two piece/two_piece3.webp"
         },
         {
             "id": 8,
+            "head":"Home/Women's Two Piece Collection",
             "name": "Two Piece Corset with Trouser",
             "price": 1099,
-            "image": "/images/products/two piece/two_piece3.webp"
+            "image": "/images/products/two piece/two_piece3.webp",
+            "sim1":"/images/products/two piece/two_piece2.webp",
+            "sim2":"/images/products/two piece/two_piece.webp",
+            "sim3":"/images/products/two piece/two_piece4.webp"
         }
     ],
     "trouser":[
         {
             "id": 9,
+            "head":"Home/Women's Trouser Collection",
             "name":"White Two Piece Office Look",
             "price":2000,
-            "image":"/images/products/trouser/trouser2.webp"
+            "image":"/images/products/trouser/trouser2.webp",
+            "sim1":"/images/products/trouser/trouser3.webp",
+            "sim2":"/images/products/trouser/trouser4.webp",
+            "sim3":"/images/products/trouser/trouser5.webp"
         },
         {
             "id": 10,
+            "head":"Home/Women's Trouser Collection",
             "name":"Baggy Trouser and Top",
             "price":1599,
-            "image":"/images/products/trouser/trouser3.webp"
+            "image":"/images/products/trouser/trouser3.webp",
+            "sim1":"/images/products/trouser/trouser2.webp",
+            "sim2":"/images/products/trouser/trouser4.webp",
+            "sim3":"/images/products/trouser/trouser5.webp"
         },
         {
             "id": 11,
+            "head":"Home/Women's Trouser Collection",
             "name":"Off Shoulder Two Piece",
             "price":1899,
-            "image":"/images/products/trouser/trouser4.webp"
+            "image":"/images/products/trouser/trouser4.webp",
+            "sim1":"/images/products/trouser/trouser2.webp",
+            "sim2":"/images/products/trouser/trouser3.webp",
+            "sim3":"/images/products/trouser/trouser5.webp"
         },
         {
             "id": 12,
+            "head":"Home/Women's Trouser Collection",
             "name":"Two Piece Corset with Trouser",
             "price":1099,
-            "image":"/images/products/trouser/trouser5.webp"
+            "image":"/images/products/trouser/trouser5.webp",
+            "sim1":"/images/products/trouser/trouser2.webp",
+            "sim2":"/images/products/trouser/trouser3.webp",
+            "sim3":"/images/products/trouser/trouser4.webp"
         }
     ],
     "menShoe":[
         {
             "id": 13,
+            "head":"Home/Men's Shoe Collection",
             "name":"Men's Black Office Shoes",
             "price":2000,
-            "image":"/images/products/shoes/shoes1.webp"
+            "image":"/images/products/shoes/shoes1.webp",
+            "sim1":"/images/products/shoes/shoes2.webp",
+            "sim2":"/images/products/shoes/shoes3.webp",
+            "sim3":"/images/products/shoes/shoes4.webp"
         },
         {
             "id": 14,
+            "head":"Home/Men's Shoe Collection",
             "name":"Men's Maroon Office Shoes",
             "price":1599,
-            "image":"/images/products/shoes/shoes2.webp"
+            "image":"/images/products/shoes/shoes2.webp",
+            "sim1":"/images/products/shoes/shoes1.webp",
+            "sim2":"/images/products/shoes/shoes3.webp",
+            "sim3":"/images/products/shoes/shoes4.webp"
         },
         {
             "id": 15,
+            "head":"Home/Men's Shoe Collection",
             "name":"Men's Black Office Shoes",
             "price":1899,
-            "image":"/images/products/shoes/shoes3.webp"
+            "image":"/images/products/shoes/shoes3.webp",
+            "sim1":"/images/products/shoes/shoes1.webp",
+            "sim2":"/images/products/shoes/shoes2.webp",
+            "sim3":"/images/products/shoes/shoes4.webp"
         },
         {
             "id": 16,
+            "head":"Home/Men's Shoe Collection",
             "name":"Men's Wedding Shoes",
             "price":1099,
-            "image":"/images/products/shoes/shoes4.webp"
+            "image":"/images/products/shoes/shoes4.webp",
+            "sim1":"/images/products/shoes/shoes1.webp",
+            "sim2":"/images/products/shoes/shoes2.webp",
+            "sim3":"/images/products/shoes/shoes3.webp"
         }
     ],
     "womenShoe":[
         {
             "id": 17,
+            "head":"Home/Women's Shoe Collection",
             "name":"White Tall Heels",
             "price":2000,
-            "image":"/images/products/heels/heels1.webp"
+            "image":"/images/products/heels/heels1.webp",
+            "sim1":"/images/products/heels/heels2.webp",
+            "sim2":"/images/products/heels/heels3.webp",
+            "sim3":"/images/products/heels/heels4.webp"
         },
         {
             "id": 18,
+            "head":"Home/Women's Shoe Collection",
             "name":"Black Tall Heels",
             "price":1599,
-            "image":"/images/products/heels/heels2.webp"
+            "image":"/images/products/heels/heels2.webp",
+            "sim1":"/images/products/heels/heels1.webp",
+            "sim2":"/images/products/heels/heels3.webp",
+            "sim3":"/images/products/heels/heels4.webp"
         },
         {
             "id": 19,
+            "head":"Home/Women's Shoe Collection",
             "name":"Black Tall Heels",
             "price":1899,
-            "image":"/images/products/heels/heels3.webp"
+            "image":"/images/products/heels/heels3.webp",
+            "sim1":"/images/products/heels/heels1.webp",
+            "sim2":"/images/products/heels/heels2.webp",
+            "sim3":"/images/products/heels/heels4.webp"
         },
         {
             "id": 20,
+            "head":"Home/Women's Shoe Collection",
             "name":"Women's Black Tall Boots",
             "price":1099,
-            "image":"/images/products/heels/heels4.webp"
+            "image":"/images/products/heels/heels4.webp",
+            "sim1":"/images/products/heels/heels1.webp",
+            "sim2":"/images/products/heels/heels2.webp",
+            "sim3":"/images/products/heels/heels3.webp"
+        }
+    ],
+    "onePiece":[
+        {
+            "id": 21,
+            "head":"Home/Women's One Piece Collection",
+            "name":"White Tall Heels",
+            "price":2000,
+            "image":"/images/products/one_piece/wshirt1.jpg",
+            "sim1":"/images/products/one_piece/wshirt2.jpg",
+            "sim2":"/images/products/one_piece/wshirt3.jpg",
+            "sim3":"/images/products/one_piece/wshirt4.jpg"
+        },
+        {
+            "id": 22,
+            "head":"Home/Women's One Piece Collection",
+            "name":"Black Tall Heels",
+            "price":1599,
+            "image":"/images/products/one_piece/wshirt2.jpg",
+            "sim1":"/images/products/one_piece/wshirt1.jpg",
+            "sim2":"/images/products/one_piece/wshirt3.jpg",
+            "sim3":"/images/products/one_piece/wshirt4.jpg"
+        },
+        {
+            "id": 23,
+            "head":"Home/Women's One Piece Collection",
+            "name":"Black Tall Heels",
+            "price":1899,
+            "image":"/images/products/one_piece/wshirt3.jpg",
+            "sim1":"/images/products/one_piece/wshirt1.jpg",
+            "sim2":"/images/products/one_piece/wshirt2.jpg",
+            "sim3":"/images/products/one_piece/wshirt4.jpg"
+        },
+        {
+            "id": 24,
+            "head":"Home/Women's One Piece Collection",
+            "name":"Women's Black Tall Boots",
+            "price":1099,
+            "image":"/images/products/one_piece/wshirt4.jpg",
+            "sim1":"/images/products/one_piece/wshirt1.jpg",
+            "sim2":"/images/products/one_piece/wshirt2.jpg",
+            "sim3":"/images/products/one_piece/wshirt3.jpg"
         }
     ]
 }

@@ -2,7 +2,7 @@ const express = require("express");
 const session = require("express-session");
 const ejsMate = require("ejs-mate");
 const path = require("path");
-
+const productData=require('./public/product.json')
 
 
 const app = express();
@@ -38,7 +38,13 @@ app.get('/signup',(req,res)=>{
 //SINGLE COLLECTION
 app.get('/single/:num',(req,res)=>{
   const{num}=req.params;
-    res.render(`single/single${num}`);
+  const prodId=parseInt(num,10);
+  for(const cat in productData){
+    product=productData[cat].find(item=>item.id===prodId);
+    if(product) break;
+  }
+
+    res.render(`single/single`,{prodId,product});
 });
 
 app.listen(3000, () => {

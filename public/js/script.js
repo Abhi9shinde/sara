@@ -145,6 +145,7 @@ const loadProducts = () => {
         addDatatoHTML("trouser", listProduct.trouser);
         addDatatoHTML("men_shoes", listProduct.menShoe);
         addDatatoHTML("women_shoes", listProduct.womenShoe);
+        addDatatoHTML("one_piece", listProduct.onePiece);
       }else if(window.location.pathname.startsWith('/single')){
         if(document.getElementById('shirt')){
             addDatatoHTML("shirt", listProduct.shirt);
@@ -161,6 +162,9 @@ const loadProducts = () => {
         if(document.getElementById('women_shoes')){
             addDatatoHTML("women_shoes", listProduct.womenShoe);
         }
+        if(document.getElementById('one_piece')){
+          addDatatoHTML("one_piece", listProduct.onePiece);
+      }
 
       } else if (window.location.pathname === '/bag') {
         // Bag page

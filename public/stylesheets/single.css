@@ -353,6 +353,17 @@ footer .icon #twitter:hover {
     padding-top: 1.3em;
 }
 
+#shirt .pro a,
+#two_piece .pro a,
+#one_piece .pro a,
+#trouser .pro a,
+#men_shoes .pro a,
+#women_shoes .pro a {
+    padding: 6px 6px;
+    color: black;
+    border: black 1px solid;
+    border-radius: 50%;
+}
 
 #two_piece .pro,
 #shirt .pro,
