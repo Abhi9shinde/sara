@@ -30,7 +30,9 @@
 <body>
     <div id="main">
         <section id="header" class="">
-            <h1>SARA</h1>
+            <a href="/" style="text-decoration: none;">
+                <h1>SARA</h1>
+            </a>
             <div class="link">
                 <ul id="navlink">
                     <li><a class="active" href="/index">Home</a></li>
@@ -46,46 +48,49 @@
             </div>
         </section>
     </div>
-    <section id="prodet" class="hidden_up">
+    <section id="prodet">
         <div class="single-product">
-            <img src="<%= product.image %>" width="100%" id="main" alt="image">
+            <div class="mainImage">
+                <img src="<%= product.image %>" id="main" alt="Product Image">
+            </div>
+            <br>
             <div class="similar-image-group">
                 <div class="small-image-col">
-                    <img src="<%= product.sim1 %>" width="100%" class="small-img" alt="image">
+                    <img src="<%= product.sim1 %>" class="small-img" alt="Similar Image 1">
                 </div>
                 <div class="small-image-col">
-                    <img src="<%= product.sim2 %>" width="100%" class="small-img" alt="image">
+                    <img src="<%= product.sim2 %>" class="small-img" alt="Similar Image 2">
                 </div>
                 <div class="small-image-col">
-                    <img src="<%= product.sim3 %>" width="100%" class="small-img" alt="image">
+                    <img src="<%= product.sim3 %>" class="small-img" alt="Similar Image 3">
                 </div>
-
             </div>
         </div>
+    
         <div class="single-pro-detail">
             <h6><%=product.head%></h6>
             <h4><%=product.name%></h4>
             <h2>Rs.<%=product.price%></h2>
-            <select>
+            <select id="product-size">
                 <option>Select Size</option>
-                <option>S</option>
-                <option>M</option>
-                <option>L</option>
-                <option>XL</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
             </select>
-            <input type="number" value="1" min="0">
+            <input id="quan" type="number" value="1" min="0">
             <button class="btn2" onclick="alertFunction('<%=prodId%>')">Add To Cart</button>
             <h4>Product Details</h4>
-            <p>- Material compositionRayon</p>
-            <p>- PatternPrinted</p>
-            <p>- Fit typeRegular Fit</p>
-            <p>- Sleeve typeShort Sleeve</p>
-
-            <p>- Collar styleREGULAR COLLAR</p>
-            <p>- LengthStandard Length</p>
-            <p>- Country of OriginIndia</p>
+            <p>- Material composition: Rayon</p>
+            <p>- Pattern: Printed</p>
+            <p>- Fit type: Regular Fit</p>
+            <p>- Sleeve type: Short Sleeve</p>
+            <p>- Collar style: Regular Collar</p>
+            <p>- Length: Standard Length</p>
+            <p>- Country of Origin: India</p>
         </div>
     </section>
+    
     <section id="products">
         <h2>Similar Products</h2>
         <p>Women's New Arrival</p>

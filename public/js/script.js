@@ -66,17 +66,33 @@ function redirectToPage(productId) {
 
 //getting product id to add it in the cart
 const alertFunction = (ProductID) => {
-  addtoCart(ProductID);
+  // Check if a size dropdown exists on the page
+  const sizeDropdown = document.querySelector("select");
+  const quan=document.querySelector("#quan");
+  let quantity=1;
+  let selectedSize = "S"; // Default to "S"
+  if (sizeDropdown) {
+    selectedSize = sizeDropdown.value; // Get the selected size
+  }
+  if (quan) {
+    quantity = quan.value; // Get the selected size
+  }
+  // Call the addtoCart function with the product ID and the selected/default size
+  addtoCart(ProductID, selectedSize,quantity);
 };
-//function to add elements in the cart array
 
-const addtoCart = (ProductID) => {
+//function to add elements in the cart array
+const addtoCart = (ProductID, selectedSize,quan) => {
+    if (!selectedSize || selectedSize === "Select Size") {
+      selectedSize = "S"; // Fallback to default size
+    }
     let carts = JSON.parse(localStorage.getItem('carts')) || [];
-    let positionTheProductInCart = carts.findIndex((value) => value.product_id == ProductID);
+    let positionTheProductInCart = carts.findIndex((value) => value.product_id == ProductID && value.size === selectedSize);
     if (carts.length <= 0 || positionTheProductInCart < 0) {
       carts.push({
         product_id: ProductID,
-        quantity: 1,
+        size: selectedSize,
+        quantity: quan,
       });
     } else {
       carts[positionTheProductInCart].quantity += 1;
@@ -105,18 +121,19 @@ const addtoCart = (ProductID) => {
               <td><img src="${info.image}" alt="${info.name}"></td>
               <td>${info.name}</td>
               <td><input type="number" value="${cart.quantity}" min="1" onchange="updateQuantity(${cart.product_id}, this.value)"></td>
+              <td>${cart.size}</td>
               <td>Rs.${info.price * cart.quantity}</td>
-              <td><a href="#" onclick="removeFromCart(${cart.product_id})"><i class="far fa-times-circle"></i></a></td>
+              <td style="text-align: center; vertical-align: middle;"><a href="#" onclick="removeFromCart(${cart.product_id})"><i class="far fa-times-circle"></i></a></td>
             `;
             cartHTML.appendChild(newCart);
           }
         });
       } else {
-        cartHTML.innerHTML = '<br><tr><td colspan="5">Your cart is empty</td></tr><br>';
+        cartHTML.innerHTML = '<br><tr><td colspan="6">Your cart is empty</td></tr><br>';
         
       }
     }
-  };
+  };  
 
   function removeFromCart(productId) {
     let carts = JSON.parse(localStorage.getItem('carts')) || [];
